@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pedestrian Traffic Dashboard</title>
+    <style>
+        body {font-family: Arial; text-align:center; background:#f5f5f5;}
+        table {margin:auto; border-collapse:collapse; width:60%; background:white;}
+        th,td {border:1px solid #ccc; padding:10px;}
+        th {background:#222; color:white;}
+    </style>
+</head>
+<body>
+
+<h2>🚦 Pedestrian Traffic Monitor</h2>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>Date & Time</th>
+    <th>Pedestrian Count</th>
+</tr>
+
+{% for row in logs %}
+<tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
